@@ -32,7 +32,7 @@ const artigosIniciais = [
 // 2. CONFIGURAÇÃO DE SENHA DA ÁREA RESTRITA
 // =========================================================================
 // Altere a senha abaixo para a senha que você desejar usar:
-const SENHA_ADVOGADA = "henza40980";
+const SENHA_ADVOGADA = "Gaspar1504!";
 
 // Carrega artigos do navegador ou usa os iniciais
 let artigos = JSON.parse(localStorage.getItem("henza_artigos")) || artigosIniciais;
