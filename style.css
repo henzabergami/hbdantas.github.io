@@ -1,0 +1,530 @@
+:root {
+    --bg-color: #364757;       /* Cor de fundo solicitada */
+    --primary-color: #B2BBEB;  /* Cor principal solicitada */
+    --bg-card: #2c3b49;        /* Tom levemente mais escuro para contraste sutil */
+    --text-light: #f0f3fa;     /* Branco suave para leitura confortável */
+    --text-muted: #cbd2e6;     /* Cinza azulado claro */
+    --border-color: rgba(178, 187, 235, 0.2);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-light);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    line-height: 1.6;
+    font-weight: 300;
+}
+
+h1, h2, h3, .logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.container {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* Navbar */
+.navbar {
+    position: sticky;
+    top: 0;
+    background-color: rgba(54, 71, 87, 0.95);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border-color);
+    z-index: 100;
+    padding: 18px 0;
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 1.45rem;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 400;
+    letter-spacing: 3px;
+    display: block;
+    color: var(--text-light);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.nav-links a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+.btn-discreto {
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+.btn-discreto:hover {
+    opacity: 1;
+}
+
+.btn-discreto svg {
+    width: 16px;
+    height: 16px;
+}
+
+/* Hero */
+.hero {
+    padding: 110px 0 90px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.oab-badge {
+    color: var(--primary-color);
+    font-size: 0.8rem;
+    letter-spacing: 2.5px;
+    margin-bottom: 16px;
+    font-weight: 500;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    line-height: 1.15;
+    max-width: 720px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.hero-subtitle {
+    max-width: 600px;
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    margin-bottom: 36px;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    padding: 12px 28px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.3s, transform 0.2s;
+}
+
+.btn-primary:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+.btn-outline {
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 12px 28px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background 0.3s, color 0.3s;
+}
+
+.btn-outline:hover {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+}
+
+/* Seções Gerais */
+.section {
+    padding: 85px 0;
+}
+
+.section-alt {
+    background-color: var(--bg-card);
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.section-header {
+    margin-bottom: 48px;
+}
+
+.section-header h2 {
+    font-size: 2.4rem;
+    color: var(--primary-color);
+    margin-bottom: 8px;
+}
+
+.section-header p {
+    color: var(--text-muted);
+}
+
+/* Áreas de Atuação */
+.grid-atuacao {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+}
+
+.card-atuacao {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    padding: 32px 24px;
+    border-radius: 6px;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.card-atuacao:hover {
+    transform: translateY(-4px);
+    border-color: var(--primary-color);
+}
+
+.card-atuacao svg {
+    color: var(--primary-color);
+    width: 32px;
+    height: 32px;
+    margin-bottom: 18px;
+    stroke-width: 1.5;
+}
+
+.card-atuacao h3 {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+    color: #ffffff;
+}
+
+.card-atuacao p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+/* Carrossel de Artigos */
+.carousel-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 20px;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    width: 100%;
+    padding: 8px 0;
+}
+
+.artigo-card {
+    min-width: 300px;
+    max-width: 300px;
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 24px;
+    cursor: pointer;
+    transition: border-color 0.3s, transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.artigo-card:hover {
+    border-color: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+.artigo-icon-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    color: var(--primary-color);
+}
+
+.artigo-icon-top span {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.artigo-card h3 {
+    font-size: 1.35rem;
+    color: #ffffff;
+    margin-bottom: 14px;
+    line-height: 1.3;
+}
+
+.ler-mais {
+    font-size: 0.8rem;
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.carousel-btn {
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    color: var(--primary-color);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: background 0.3s;
+}
+
+.carousel-btn:hover {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+}
+
+/* Sobre Mim */
+.sobre-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 48px;
+    align-items: center;
+}
+
+.sobre-foto img {
+    width: 100%;
+    border-radius: 6px;
+    border: 1px solid var(--primary-color);
+    object-fit: cover;
+    aspect-ratio: 4/5;
+}
+
+.tag {
+    color: var(--primary-color);
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+.sobre-texto h2 {
+    font-size: 2.6rem;
+    margin: 6px 0;
+    color: #ffffff;
+}
+
+.oab-destaque {
+    color: var(--primary-color);
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.sobre-texto p {
+    margin-bottom: 16px;
+    color: var(--text-muted);
+}
+
+.nacional-box {
+    margin-top: 24px;
+    padding: 14px 18px;
+    background-color: var(--bg-card);
+    border-left: 3px solid var(--primary-color);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+.nacional-box svg {
+    color: var(--primary-color);
+    flex-shrink: 0;
+}
+
+/* Footer */
+footer {
+    border-top: 1px solid var(--border-color);
+    padding: 36px 0;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+footer strong {
+    color: var(--primary-color);
+    letter-spacing: 1px;
+}
+
+/* Modais */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 200;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(20, 28, 36, 0.85);
+    backdrop-filter: blur(4px);
+    overflow-y: auto;
+}
+
+.modal-content {
+    background-color: var(--bg-color);
+    border: 1px solid var(--primary-color);
+    margin: 6% auto;
+    padding: 36px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 680px;
+    position: relative;
+}
+
+.close-modal {
+    position: absolute;
+    right: 24px;
+    top: 20px;
+    font-size: 28px;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+.modal-content input, .modal-content textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 12px;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    color: #ffffff;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+.modal-date {
+    font-size: 0.8rem;
+    color: var(--primary-color);
+}
+
+.artigo-corpo {
+    margin-top: 20px;
+    white-space: pre-line;
+    color: var(--text-light);
+}
+
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-outline-sm {
+    background: none;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 6px 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+.divisor {
+    border: 0;
+    border-top: 1px solid var(--border-color);
+    margin: 24px 0;
+}
+
+.lista-admin {
+    list-style: none;
+    margin-top: 12px;
+}
+
+.lista-admin li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: var(--bg-card);
+    margin-bottom: 8px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.btn-excluir {
+    background: #a83232;
+    color: white;
+    border: none;
+    padding: 4px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.github-sync-box {
+    margin-top: 20px;
+    padding: 14px;
+    background: var(--bg-card);
+    border-radius: 6px;
+    font-size: 0.82rem;
+    color: var(--text-muted);
+}
+
+.github-sync-box button {
+    margin-top: 10px;
+}
+
+.erro-msg {
+    color: #ff8a8a;
+    font-size: 0.85rem;
+    margin-top: 8px;
+}
+
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2.5rem; }
+    .sobre-grid { grid-template-columns: 1fr; }
+    .nav-links { gap: 14px; }
+    .nav-links a { font-size: 0.8rem; }
+}

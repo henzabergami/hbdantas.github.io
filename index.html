@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HENZA BERGAMI ADVOGADA</title>
+    <!-- Fontes sóbrias e elegantes (Cormorant Garamond para títulos e Plus Jakarta Sans para leitura) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Ícones minimalistas (Lucide Icons) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Cabeçalho e Navegação -->
+    <header class="navbar">
+        <div class="container nav-content">
+            <a href="#inicio" class="logo">HENZA BERGAMI <span>ADVOGADA</span></a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#atuacao">Áreas de Atuação</a></li>
+                    <li><a href="#artigos">Artigos</a></li>
+                    <li><a href="#sobre">Sobre Mim</a></li>
+                    <li><button id="btn-area-restrita" class="btn-discreto" title="Área da Advogada"><i data-lucide="lock"></i></button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Seção Inicial (Hero) -->
+    <section id="inicio" class="hero">
+        <div class="container hero-content">
+            <p class="oab-badge">OAB/ES 40.980 • ATUAÇÃO EM TODO O BRASIL</p>
+            <h1>Advocacia estratégica, técnica e humanizada.</h1>
+            <p class="hero-subtitle">Atendimento jurídico digital e presencial com alcance nacional, focado na defesa rigorosa dos seus direitos e na resolução eficiente de conflitos.</p>
+            <div class="hero-actions">
+                <a href="#atuacao" class="btn-primary">Conheça as Áreas</a>
+                <a href="https://wa.me/5527999999999" target="_blank" class="btn-outline">Agendar Consulta</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Áreas de Atuação -->
+    <section id="atuacao" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Áreas de Atuação</h2>
+                <p>Assessoria jurídica especializada com atendimento em todo o território nacional.</p>
+            </div>
+            <div class="grid-atuacao">
+                <div class="card-atuacao">
+                    <i data-lucide="scale"></i>
+                    <h3>Direito Cível</h3>
+                    <p>Contratos, responsabilidade civil, indenizações, direito do consumidor, obrigações e resolução de litígios patrimoniais.</p>
+                </div>
+                <div class="card-atuacao">
+                    <i data-lucide="landmark"></i>
+                    <h3>Direito Bancário</h3>
+                    <p>Revisão de contratos bancários, abusividades financeiras, fraudes digitais, superendividamento e defesa do consumidor bancário.</p>
+                </div>
+                <div class="card-atuacao">
+                    <i data-lucide="briefcase"></i>
+                    <h3>Direito Trabalhista</h3>
+                    <p>Defesa dos direitos nas relações de trabalho, verbas rescisórias, reconhecimento de vínculo e consultoria preventiva.</p>
+                </div>
+                <div class="card-atuacao">
+                    <i data-lucide="shield-alert"></i>
+                    <h3>Direito Penal</h3>
+                    <p>Defesa criminal técnica, acompanhamento em inquéritos policiais, audiências de custódia, processos criminais e execução penal.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Carrossel Horizontal de Artigos (Passa a cada 5s) -->
+    <section id="artigos" class="section section-alt">
+        <div class="container">
+            <div class="section-header">
+                <h2>Artigos & Publicações</h2>
+                <p>Análises jurídicas e informativos sobre seus direitos.</p>
+            </div>
+
+            <div class="carousel-wrapper">
+                <button class="carousel-btn prev" id="prev-artigo" aria-label="Anterior"><i data-lucide="chevron-left"></i></button>
+                <div class="carousel-track" id="carousel-track">
+                    <!-- Os cards dos artigos serão inseridos automaticamente via JavaScript -->
+                </div>
+                <button class="carousel-btn next" id="next-artigo" aria-label="Próximo"><i data-lucide="chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Mim -->
+    <section id="sobre" class="section">
+        <div class="container sobre-grid">
+            <div class="sobre-foto">
+                <!-- Substitua 'perfil.jpg' pelo nome real da sua foto na pasta do GitHub -->
+                <img src="perfil.jpg" alt="Dra. Henza Bergami" onerror="this.src='https://via.placeholder.com/400x500/364757/B2BBEB?text=Sua+Foto+Aqui'">
+            </div>
+            <div class="sobre-texto">
+                <span class="tag">SOBRE MIM</span>
+                <h2>Henza Bergami</h2>
+                <p class="oab-destaque">Advogada • OAB/ES 40.980</p>
+                <p>
+                    Escreva aqui a sua trajetória profissional, sua formação acadêmica, os valores que guiam a sua advocacia e o compromisso com cada cliente. 
+                </p>
+                <p>
+                    Com atuação estruturada para atender demandas em <strong>todo o Brasil</strong> por meio do processo judicial eletrônico e atendimento digital personalizado, busco unir precisão técnica, clareza na comunicação e agilidade na condução de cada caso.
+                </p>
+                <div class="nacional-box">
+                    <i data-lucide="map-pin"></i>
+                    <span>Atendimento 100% digital e presencial • Atuação em todos os estados do Brasil.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="container footer-content">
+            <div>
+                <strong>HENZA BERGAMI ADVOGADA</strong>
+                <p>OAB/ES 40.980 • Atuação em todo o Brasil</p>
+            </div>
+            <p class="copyright">© <span id="ano-atual"></span> Henza Bergami. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Modal de Leitura de Artigo -->
+    <div id="modal-leitura" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" id="close-leitura">&times;</span>
+            <span class="modal-date" id="leitura-data"></span>
+            <h2 id="leitura-titulo"></h2>
+            <div id="leitura-corpo" class="artigo-corpo"></div>
+        </div>
+    </div>
+
+    <!-- Modal Área Restrita (Login e Publicação) -->
+    <div id="modal-admin" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" id="close-admin">&times;</span>
+            
+            <!-- Tela de Login -->
+            <div id="admin-login-box">
+                <h2>Área Restrita</h2>
+                <p>Acesso exclusivo para publicação de artigos.</p>
+                <input type="password" id="admin-senha" placeholder="Digite sua senha de acesso">
+                <button id="btn-login" class="btn-primary" style="width: 100%; margin-top: 10px;">Entrar</button>
+                <p id="login-erro" class="erro-msg"></p>
+            </div>
+
+            <!-- Painel de Publicação (Oculto até logar) -->
+            <div id="admin-panel-box" style="display: none;">
+                <div class="admin-header">
+                    <h2>Publicar Novo Artigo</h2>
+                    <button id="btn-logout" class="btn-outline-sm">Sair</button>
+                </div>
+                <input type="text" id="novo-titulo" placeholder="Título do Artigo">
+                <textarea id="novo-conteudo" rows="8" placeholder="Escreva o conteúdo completo do seu artigo aqui..."></textarea>
+                <button id="btn-publicar" class="btn-primary" style="width: 100%;">Publicar no Site</button>
+
+                <hr class="divisor">
+                <h3>Artigos Publicados</h3>
+                <ul id="lista-admin-artigos" class="lista-admin"></ul>
+
+                <div class="github-sync-box">
+                    <p><strong>Sincronizar com GitHub Pages:</strong> Como o GitHub Pages é estático, após criar/excluir artigos aqui, clique abaixo para copiar a lista atualizada e colar no início do seu arquivo <code>script.js</code>.</p>
+                    <button id="btn-exportar" class="btn-outline-sm">Copiar Código dos Artigos</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
